@@ -34,6 +34,7 @@ function format(seconds) {
 }
 
 function render() {
+  document.body.dataset.mode = mode;
   timeValue.textContent = format(remaining);
   modeLabel.textContent = modes[mode].label;
   const fraction = remaining / total;
