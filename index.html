@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FocusInk BH</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#timer" aria-label="FocusInk BH">
+      <span class="mark"><span></span></span>
+      <span><strong>FocusInk BH</strong><small>study time made visible</small></span>
+    </a>
+    <nav>
+      <a href="#timer">Timer</a>
+      <a href="#ink-map">Ink Map</a>
+      <a href="#report">Report</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Pomodoro for students</p>
+        <h1>Turn study time into visible progress.</h1>
+        <p>FocusInk BH combines Pomodoro timers with an Ink Progress Map, so every completed focus session leaves proof that you moved forward.</p>
+      </div>
+      <img src="assets/focusink_site_preview.svg" alt="FocusInk BH timer and ink progress map preview">
+    </section>
+
+    <section class="workspace" id="timer">
+      <aside class="panel task-panel">
+        <h2>Focus target</h2>
+        <label for="taskInput">What will you finish this session?</label>
+        <textarea id="taskInput" rows="5">Revise one business project section and prepare a short summary.</textarea>
+        <div class="mode-list" role="tablist" aria-label="Timer modes">
+          <button class="mode active" data-mode="pomodoro">Pomodoro <span>25 min</span></button>
+          <button class="mode" data-mode="short">Short Break <span>5 min</span></button>
+          <button class="mode" data-mode="long">Long Break <span>15 min</span></button>
+        </div>
+      </aside>
+
+      <section class="timer-card panel">
+        <p class="eyebrow" id="modeLabel">Pomodoro</p>
+        <div class="timer-ring" aria-live="polite">
+          <svg viewBox="0 0 220 220" aria-hidden="true">
+            <circle class="track" cx="110" cy="110" r="94"></circle>
+            <circle class="progress" id="progressCircle" cx="110" cy="110" r="94"></circle>
+          </svg>
+          <strong id="timeValue">25:00</strong>
+        </div>
+        <div class="controls">
+          <button id="startPause">Start</button>
+          <button id="reset" class="ghost">Reset</button>
+          <button id="skip" class="ghost">Skip</button>
+          <button id="complete" class="ghost">Complete</button>
+        </div>
+        <p class="status-message" id="statusMessage" aria-live="polite">Pomodoro mode ready.</p>
+      </section>
+
+      <section class="panel ink-panel" id="ink-map">
+        <div class="section-head">
+          <h2>Ink Progress Map</h2>
+          <span id="sessionBadge">0 sessions</span>
+        </div>
+        <svg class="ink-map" id="inkMap" viewBox="0 0 640 360" aria-label="Ink progress map">
+          <path class="paper-line" d="M58 286 C142 178, 207 308, 280 178 S407 103, 482 196 S560 234, 594 90"></path>
+          <path class="ink-line" id="inkPath" d="M58 286 C142 178, 207 308, 280 178 S407 103, 482 196 S560 234, 594 90"></path>
+        </svg>
+        <ul class="stats">
+          <li><strong id="focusMinutes">0</strong><span>focus minutes</span></li>
+          <li><strong id="streak">0</strong><span>day streak</span></li>
+          <li><strong id="tasksDone">0</strong><span>tasks logged</span></li>
+        </ul>
+      </section>
+    </section>
+
+    <section class="report" id="report">
+      <div>
+        <p class="eyebrow">Evidence of development</p>
+        <h2>Export a simple focus report for your booth demo.</h2>
+        <p>The report proves that the service is not just a timer. It shows sessions, task notes, and progress evidence.</p>
+      </div>
+      <button id="downloadReport">Download report</button>
+    </section>
+  </main>
+
+  <footer>
+    <strong>FocusInk BH</strong>
+    <span>Pomodoro | Short Break | Long Break | Ink Progress Map</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
