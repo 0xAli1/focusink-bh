@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+  <title id="title">FocusInk BH website preview</title>
+  <desc id="desc">A preview of the FocusInk BH Pomodoro timer and Ink Progress Map.</desc>
+  <rect width="1440" height="900" fill="#F8F4EA"/>
+  <rect x="70" y="72" width="1300" height="756" rx="32" fill="#FFFDF7" stroke="#DED8CA" stroke-width="3"/>
+  <g transform="translate(110 116)">
+    <rect width="66" height="66" rx="16" fill="#4E46E5"/>
+    <path d="M18 43 L34 18 L52 50" fill="none" stroke="#38D5C8" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="82" y="46" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="800" fill="#161626">FocusInk BH</text>
+    <text x="84" y="70" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#4E46E5">study time made visible</text>
+  </g>
+  <g transform="translate(112 248)">
+    <text font-family="Arial, Helvetica, sans-serif" font-size="70" font-weight="800" fill="#4E46E5">Pomodoro</text>
+    <text y="126" font-family="Arial, Helvetica, sans-serif" font-size="122" font-weight="900" fill="#161626">25:00</text>
+    <rect y="178" width="344" height="76" rx="18" fill="#4E46E5"/>
+    <text x="80" y="226" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="800" fill="#FFFFFF">Start Focus</text>
+    <rect x="388" y="178" width="310" height="76" rx="18" fill="#EFE8DC" stroke="#DED8CA"/>
+    <text x="430" y="226" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="800" fill="#161626">Short Break</text>
+    <rect x="742" y="178" width="310" height="76" rx="18" fill="#EFE8DC" stroke="#DED8CA"/>
+    <text x="790" y="226" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="800" fill="#161626">Long Break</text>
+  </g>
+  <g transform="translate(850 170)">
+    <text font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="900" fill="#161626">Ink Progress Map</text>
+    <path d="M36 166 C122 82, 184 214, 262 106 S392 28, 470 138 S552 190, 596 58" fill="none" stroke="#E9E1D0" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M36 166 C122 82, 184 214, 262 106 S392 28, 470 138 S552 190, 596 58" fill="none" stroke="#4E46E5" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+    <g fill="#38D5C8" stroke="#161626" stroke-width="3">
+      <circle cx="36" cy="166" r="22"/>
+      <circle cx="124" cy="98" r="22"/>
+      <circle cx="260" cy="118" r="22"/>
+      <circle cx="402" cy="116" r="22"/>
+      <circle cx="520" cy="188" r="22"/>
+      <circle cx="596" cy="58" r="22"/>
+    </g>
+  </g>
+  <g transform="translate(850 610)">
+    <rect width="436" height="130" rx="18" fill="#F1EBDF" stroke="#DED8CA"/>
+    <text x="36" y="58" font-family="Arial, Helvetica, sans-serif" font-size="32" fill="#6B6F82">Today's focus</text>
+    <text x="36" y="108" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="900" fill="#161626">3 sessions | 75 minutes</text>
+  </g>
+</svg>
