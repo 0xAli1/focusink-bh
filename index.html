@@ -6,7 +6,13 @@
   <title>FocusInk BH</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-mode="pomodoro">
+  <svg class="ambient-ink" viewBox="0 0 1440 900" aria-hidden="true">
+    <path class="ambient ambient-one" d="M-80 170 C180 40, 380 310, 620 154 S1050 58, 1520 230"></path>
+    <path class="ambient ambient-two" d="M-120 690 C210 510, 420 800, 700 650 S1110 450, 1540 620"></path>
+    <path class="ambient ambient-three" d="M80 930 C360 740, 570 1030, 910 790 S1210 760, 1480 560"></path>
+  </svg>
+
   <header class="topbar">
     <a class="brand" href="#timer" aria-label="FocusInk BH">
       <span class="mark"><span></span></span>
@@ -21,12 +27,58 @@
 
   <main>
     <section class="hero">
-      <div>
-        <p class="eyebrow">Pomodoro for students</p>
-        <h1>Turn study time into visible progress.</h1>
-        <p>FocusInk BH combines Pomodoro timers with an Ink Progress Map, so every completed focus session leaves proof that you moved forward.</p>
+      <div class="hero-copy">
+        <p class="eyebrow">Inky Pomodoro for students</p>
+        <h1>Make every focus session leave a mark.</h1>
+        <p>FocusInk BH turns Pomodoro study sessions into a living ink trail, so your time does not disappear after the timer ends.</p>
+        <div class="hero-actions">
+          <a class="button-link" href="#timer">Start Timer</a>
+          <a class="button-link ghost-link" href="#ink-map">View Ink Map</a>
+        </div>
+        <div class="hero-metrics" aria-label="FocusInk highlights">
+          <span><strong>25</strong> focus minutes</span>
+          <span><strong>3</strong> timer modes</span>
+          <span><strong>1</strong> ink trail</span>
+        </div>
       </div>
-      <img src="assets/focusink_site_preview.svg" alt="FocusInk BH timer and ink progress map preview">
+
+      <div class="ink-showcase" aria-label="Animated FocusInk BH preview">
+        <div class="ink-card">
+          <div class="showcase-header">
+            <div class="brand mini">
+              <span class="mark"><span></span></span>
+              <span><strong>FocusInk BH</strong><small>live focus flow</small></span>
+            </div>
+            <span class="pulse-chip">Ink is moving</span>
+          </div>
+
+          <div class="showcase-grid">
+            <div class="showcase-timer">
+              <span>Pomodoro</span>
+              <strong>25:00</strong>
+              <small>Start with one clear study target.</small>
+            </div>
+
+            <svg class="showcase-ink" viewBox="0 0 620 360" aria-hidden="true">
+              <path class="showcase-paper" d="M52 276 C116 164, 198 300, 268 184 S410 72, 492 174 S564 238, 590 78"></path>
+              <path class="showcase-flow" d="M52 276 C116 164, 198 300, 268 184 S410 72, 492 174 S564 238, 590 78"></path>
+              <g class="showcase-nodes">
+                <circle cx="52" cy="276" r="20"></circle>
+                <circle cx="176" cy="238" r="20"></circle>
+                <circle cx="318" cy="140" r="20"></circle>
+                <circle cx="492" cy="174" r="20"></circle>
+                <circle cx="590" cy="78" r="20"></circle>
+              </g>
+            </svg>
+          </div>
+
+          <div class="mode-ribbon">
+            <span>Pomodoro</span>
+            <span>Short Break</span>
+            <span>Long Break</span>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="workspace" id="timer">
@@ -80,7 +132,7 @@
       <div>
         <p class="eyebrow">Evidence of development</p>
         <h2>Export a simple focus report for your booth demo.</h2>
-        <p>The report proves that the service is not just a timer. It shows sessions, task notes, and progress evidence.</p>
+        <p>The report shows sessions, task notes, and progress evidence in a format you can print or show during the exhibition.</p>
       </div>
       <button id="downloadReport">Download report</button>
     </section>
