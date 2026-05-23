@@ -26,6 +26,7 @@ const streak = document.querySelector("#streak");
 const tasksDone = document.querySelector("#tasksDone");
 const sessionBadge = document.querySelector("#sessionBadge");
 const statusMessage = document.querySelector("#statusMessage");
+const resetSessions = document.querySelector("#resetSessions");
 
 function format(seconds) {
   const m = String(Math.floor(seconds / 60)).padStart(2, "0");
@@ -91,6 +92,19 @@ function skipSession() {
   statusMessage.textContent = `Skipped to ${modes[next].label}. No focus progress was added.`;
 }
 
+function resetSessionStats() {
+  const confirmed = window.confirm("Reset all completed sessions, focus minutes, and task notes?");
+  if (!confirmed) return;
+  sessions = 0;
+  minutes = 0;
+  tasks = [];
+  localStorage.removeItem("focusink.sessions");
+  localStorage.removeItem("focusink.minutes");
+  localStorage.removeItem("focusink.tasks");
+  render();
+  statusMessage.textContent = "Session history reset. Timer is unchanged.";
+}
+
 document.querySelectorAll(".mode").forEach((button) => button.addEventListener("click", () => {
   setMode(button.dataset.mode);
   statusMessage.textContent = `${modes[mode].label} mode ready.`;
@@ -119,6 +133,7 @@ reset.addEventListener("click", () => {
 });
 skip.addEventListener("click", skipSession);
 complete.addEventListener("click", completeSession);
+resetSessions.addEventListener("click", resetSessionStats);
 
 document.querySelector("#downloadReport").addEventListener("click", () => {
   const lines = [
