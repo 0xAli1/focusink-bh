@@ -159,6 +159,16 @@ h2 { margin: 0 0 14px; font-size: 28px; line-height: 1.12; }
   line-height: 1.55;
 }
 
+.technique-note {
+  margin-top: 18px;
+  padding: 14px 16px;
+  border-left: 5px solid var(--mode-color);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, .07);
+  color: var(--text) !important;
+  font-weight: 800;
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -462,6 +472,17 @@ textarea {
 .report .eyebrow { color: var(--amber); }
 .report p { color: var(--muted); }
 .report button { background: var(--amber); color: #16110A; padding-inline: 24px; }
+.report-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
+}
+.report .danger {
+  background: rgba(242, 104, 91, .12);
+  color: #FFE1DD;
+  border-color: rgba(242, 104, 91, .42);
+}
 
 footer {
   display: flex;
